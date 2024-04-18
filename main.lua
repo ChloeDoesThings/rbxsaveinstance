@@ -30,7 +30,7 @@ end
 
 -- actually decompiles scripts and saves the game
 for i, v in pairs(game:GetDescendants()) do
-if v and (v:IsA("LocalScript") or v:IsA("ModuleScript") or (v:IsA("Script") and v.RunContext == Enum.RunContext.Client)) do
+if v and (v:IsA("LocalScript") or v:IsA("ModuleScript") or (v:IsA("Script") and v.RunContext == Enum.RunContext.Client)) then
     v.Source = decompile(v) -- lets hope this doesn't overload the api or anything
     end
 end
